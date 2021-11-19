@@ -4,6 +4,11 @@ pipeline {
     GITHUB_TOKEN=credentials('github-token')
   }
   stages {
+    stage('cleanup') {
+      steps {
+        sh 'docker system prune -a --volumes --force'
+      }
+    }
     stage('build image') {
       steps {
         sh 'docker build -t darinpope/jenkins-example-ghcr:8.5-204 .'
