@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('build image') {
       steps {
-        sh 'docker build -t darinpope/jenkins-example-ghcr .'
+        sh 'docker build -t darinpope/jenkins-example-ghcr:8.5-204 .'
       }
     }
   }
