@@ -19,12 +19,12 @@ pipeline {
     }
     stage('tag image') {
       steps {
-        sh 'docker tag $IMAGE_NAME/$IMAGE_VERSION ghcr.io/$IMAGE_NAME/$IMAGE_VERSION'
+        sh 'docker tag $IMAGE_NAME:$IMAGE_VERSION ghcr.io/$IMAGE_NAME:$IMAGE_VERSION'
       }
     }
     stage('push image') {
       steps {
-        sh 'docker push ghcr.io/$IMAGE_NAME/$IMAGE_VERSION'
+        sh 'docker push ghcr.io/$IMAGE_NAME:$IMAGE_VERSION'
       }
     }
   }
