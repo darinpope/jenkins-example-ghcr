@@ -8,7 +8,6 @@ pipeline {
   stages {
     stage('build image') {
       steps {
-        sh 'env | sort'
         sh 'docker build -t $IMAGE_NAME:$IMAGE_VERSION .'
       }
     }
