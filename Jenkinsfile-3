@@ -3,7 +3,7 @@ pipeline {
   environment {
     GITHUB_TOKEN=credentials('github-token')
     IMAGE_NAME='darinpope/jenkins-example-ghcr'
-    IMAGE_VERSION='8.5.204'
+    IMAGE_VERSION='8.5-204'
   }
   stages {
     stage('build image') {
